@@ -41,7 +41,35 @@ digraph G {
 		310 -> 339
 		310 -> 364
 		313 -> 339
+		313 -> 337
 		label="Systems Track"
+	}
+	subgraph cluster_plse {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		271 -> 313
+		271 -> 330
+		313 -> 371
+		330 -> 335
+		371 -> 335
+		371 -> 382
+		310 -> 382
+		label="PL and SE Methods"
+	}
+	subgraph cluster_web {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		271 -> "TBD Web 1"
+		label="Web Development"
+	}
+	subgraph cluster_ai {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		271 -> "TBD AI 1"
+		label="AI and ML"
 	}
 	170 -> 271
 	271 -> 313
