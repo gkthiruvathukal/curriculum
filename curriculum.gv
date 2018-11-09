@@ -1,0 +1,48 @@
+digraph G {
+	compound=true
+	subgraph cluster_core {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		122
+		125
+		label="core only"
+	}
+	subgraph cluster_foundation_y1 {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		150
+		163
+		150 -> 170
+		label="Y1 Foundation"
+	}
+	subgraph cluster_year2 {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		250
+		271
+		272 [color=purple]
+		271 -> 272
+		label="Y2 Foundations + Gateways"
+	}
+	subgraph cluster_y3 {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		313
+	}
+	subgraph cluster_systems {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		271 -> 310
+		310 -> 339
+		310 -> 364
+		313 -> 339
+		label="Systems Track"
+	}
+	170 -> 271
+	271 -> 313
+}
