@@ -1,76 +1,107 @@
 digraph G {
 	compound=true
+rankdir=LR
+size="8,5"
 	subgraph cluster_core {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
+		111
+		label=core
 		122
+		label=core
 		125
-		label="core only"
+		label=core
 	}
-	subgraph cluster_foundation_y1 {
+	subgraph "cluster_foundation-y1" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
 		150
-		163
+		label="foundation-y1"
 		150 -> 170
-		label="Y1 Foundation"
+		label="foundation-y1"
+		163
+		label="foundation-y1"
 	}
-	subgraph cluster_year2 {
+	subgraph "cluster_math-TBD" {
+		node [color=white style=filled]
+		style=filled
+		color=lightgrey
+		M161
+		label="math-TBD"
+		M161 -> M162
+		label="math-TBD"
+		M263
+		label="math-TBD"
+		M264
+		label="math-TBD"
+		M212
+		label="math-TBD"
+		S203
+		label="math-TBD"
+	}
+	subgraph "cluster_cs-required-y2" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
 		250
-		271
-		272 [color=purple]
+		label="cs-required-y2"
+		170 -> 271
+		label="cs-required-y2"
 		271 -> 272
-		label="Y2 Foundations + Gateways"
+		label="cs-required-y2"
+		163 -> 264
+		170 -> 264
+		label="cs-required-y2"
 	}
-	subgraph cluster_y3 {
+	subgraph "cluster_cs-y3" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
-		313
+		272 -> 313
+		label="cs-y3"
+		317
+		label="cs-y3"
 	}
-	subgraph cluster_systems {
+	subgraph "cluster_cs-systems-arch-ce" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
-		271 -> 310
 		310 -> 339
+		label="cs-systems-arch-ce"
 		310 -> 364
-		313 -> 339
+		label="cs-systems-arch-ce"
+		310 -> 337
 		313 -> 337
-		label="Systems Track"
+		label="cs-systems-arch-ce"
+		264 -> 362
+		label="cs-systems-arch-ce"
 	}
-	subgraph cluster_plse {
+	subgraph "cluster_cs-pl-se" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
-		271 -> 313
-		271 -> 330
-		313 -> 371
 		330 -> 335
 		371 -> 335
-		371 -> 382
+		label="cs-pl-se"
 		310 -> 382
-		label="PL and SE Methods"
+		371 -> 382
+		label="cs-pl-se"
+		372 -> 376
+		label="cs-pl-se"
 	}
-	subgraph cluster_web {
+	subgraph "cluster_cs-theory" {
 		node [color=white style=filled]
 		style=filled
 		color=lightgrey
-		271 -> "TBD Web 1"
-		label="Web Development"
+		163 -> 363
+		272 -> 363
+		M162 -> 363
+		label="cs-theory"
+		363 -> "adv alg (new)"
+		label="cs-theory"
+		363 -> 356
+		label="cs-theory"
 	}
-	subgraph cluster_ai {
-		node [color=white style=filled]
-		style=filled
-		color=lightgrey
-		271 -> "TBD AI 1"
-		label="AI and ML"
-	}
-	170 -> 271
-	271 -> 313
 }
